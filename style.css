@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+/* Bước 4: Thay đổi phần tử nav để sử dụng khối nội tuyến (inline-block) và có chiều rộng khoảng 80% */
+nav {
+    background-color: #34495e;
+    padding: 10px;
+    display: inline-block;
+    width: 80%;
+}
+
+main {
+    background-color: white;
+    font-size: 18px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Bước 3: Nhận xét (comment) kiểu dáng hiện có cho phần tử li bằng dấu gạch chéo sao */
+/* li {
+    display: inline-block;
+    width: 180px;
+} 
+*/
+
+h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+    color: #0066cc;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Optional extra styling */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+main img {
+    margin: 10px;
+}
+
+
+/* =======================================================
+   CÁC PHẦN KIỂU DÁNG BỔ SUNG HOÀN TOÀN THEO YÊU CẦU TRÊN ẢNH
+   ======================================================= */
+
+/* Định dạng cho liên kết nhảy ở Bước 2 (Ẩn đi và chỉ hiện khi người dùng nhấn Tab) */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background-color: #0066cc;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 100;
+    transition: top 0.2s ease;
+}
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Bước 5: Sử dụng bộ chọn hậu duệ để chỉ tạo kiểu cho hình ảnh nằm trong nav có chiều rộng khoảng 10% */
+nav img {
+    width: 10%;
+    height: auto;
+}
+
+/* Bước 6 & Bước 8: Tạo kiểu cho lớp lưới để sử dụng lưới hai cột (mỗi cột xấp xỉ 40%) */
+/* Chơi và căn chỉnh với thuộc tính justify-content, align-items và row-gap */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center; /* Căn giữa các cột ảnh theo chiều ngang */
+    align-items: center;     /* Căn các phần tử đều nhau theo chiều dọc */
+    row-gap: 25px;           /* Khoảng cách khoảng hở giữa các hàng ảnh */
+    column-gap: 5%;          /* Khoảng hở giữa 2 cột ảnh */
+    margin: 20px 0;
+}
+
+/* Bước 7: Sử dụng bộ chọn hậu duệ để tạo kiểu cho các hình ảnh trong lớp lưới có chiều rộng 100% */
+.grid-container .grid-item img {
+    width: 100%;
+    height: auto;
+    margin: 0;               /* Reset lại margin để đảm bảo hiển thị lưới cân đối */
+}
+
+/* Bước 9: Tạo kiểu cho lớp flex để sử dụng flex flex-wrap và justify-content */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;             /* Cho phép các phần tử tự xuống hàng nếu thiếu không gian */
+    justify-content: space-around; /* Phân bổ đều khoảng cách giữa các hình ảnh */
+    margin: 20px 0;
+}
+
+.flex-container .flex-item img {
+    max-width: 350px;            /* Giữ nguyên kích thước chiều rộng ảnh gốc */
+    width: 100%;
+    height: auto;
+}
